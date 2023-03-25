@@ -26,7 +26,7 @@ public class ChessApi {
 
     public void tests() {
         System.out.println("--------------------------------------");
-        System.out.println("TEST: printAllStudents");
+        System.out.println("TEST: printAllPlayers");
         this.playerService.printAllPlayers();
         System.out.println("--------------------------------------");
     }
