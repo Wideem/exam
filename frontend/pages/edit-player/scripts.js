@@ -13,6 +13,9 @@ const loadPlayerData = async () => {
   oldPlayerData = await getPlayerByID(playerId);
   editPlayerForm.playerName.value = oldPlayerData.name;
   editPlayerForm.playerLastname.value = oldPlayerData.lastname;
+  editPlayerForm.playerEmail.value = oldPlayerData.email;
+  editPlayerForm.playerPersonCode.value = oldPlayerData.personCode;
+  editPlayerForm.playerStartDate.value = oldPlayerData.startDate;
 };
 
 const handleFormSubmit = async () => {
@@ -27,6 +30,18 @@ const handleFormSubmit = async () => {
       lastname:
         oldPlayerData.lastname !== editPlayerForm.playerLastname.value
           ? editPlayerForm.playerLastname.value
+          : undefined,
+      email:
+        oldPlayerData.email !== editPlayerForm.playerEmail.value
+          ? editPlayerForm.playerEmail.value
+          : undefined,
+      personCode:
+        oldPlayerData.personCode !== editPlayerForm.playerPersonCode.value
+          ? editPlayerForm.playerPersonCode.value
+          : undefined,
+      startDate:
+        oldPlayerData.startDate !== editPlayerForm.playerStartDate.value
+          ? editPlayerForm.playerStartDate.value
           : undefined,
     };
 
