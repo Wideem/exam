@@ -1,0 +1,12 @@
+#main {
+    margin-top: 5rem;
+    text-align: center
+}
+
+#chess-img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 30px;
+}
