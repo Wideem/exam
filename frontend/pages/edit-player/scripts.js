@@ -1,48 +1,48 @@
-import { getStudentByID, patchStudent } from "../../commons/requests.js";
+import { getPlayerByID, patchPlayer } from "../../commons/requests.js";
 
-const editStudentForm = document
-  .getElementById("editStudentForm")
+const editPlayerForm = document
+  .getElementById("editPlayerForm")
   .querySelector("form");
 
-let oldStudentData;
+let oldPlayerData;
 
-const loadStudentData = async () => {
+const loadPlayerData = async () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const studentId = urlParams.get("id");
+  const playerId = urlParams.get("id");
 
-  oldStudentData = await getStudentByID(studentId);
-  editStudentForm.studentName.value = oldStudentData.name;
-  editStudentForm.studentLastname.value = oldStudentData.lastname;
+  oldPlayerData = await getPlayerByID(playerId);
+  editPlayerForm.playerName.value = oldPlayerData.name;
+  editPlayerForm.playerLastname.value = oldPlayerData.lastname;
 };
 
 const handleFormSubmit = async () => {
-  editStudentForm.addEventListener("submit", async (e) => {
+  editPlayerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const student = {
+    const player = {
       name:
-        oldStudentData.name !== editStudentForm.studentName.value
-          ? editStudentForm.studentName.value
+        oldPlayerData.name !== editPlayerForm.playerName.value
+          ? editPlayerForm.playerName.value
           : undefined,
       lastname:
-        oldStudentData.lastname !== editStudentForm.studentLastname.value
-          ? editStudentForm.studentLastname.value
+        oldPlayerData.lastname !== editPlayerForm.playerLastname.value
+          ? editPlayerForm.playerLastname.value
           : undefined,
     };
 
-    await patchStudent(student, oldStudentData.id);
-    window.location.replace("../student-list/student-list.html");
+    await patchPlayer(player, oldPlayerData.id);
+    window.location.replace("../player-list/player-list.html");
   });
 };
 
 const handleCancelButton = () => {
   document.getElementById("cancelButton").addEventListener("click", () => {
-    window.location.replace("../student-list/student-list.html");
+    window.location.replace("../player-list/player-list.html");
   });
 };
 
 (async () => {
-  await loadStudentData();
+  await loadPlayerData();
   handleCancelButton();
   await handleFormSubmit();
 })();

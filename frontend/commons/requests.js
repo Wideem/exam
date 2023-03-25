@@ -49,7 +49,7 @@ export const patchPlayer = async (player, id) => {
 };
 
 export const deletePlayerById = async (playerId) => {
-  await fetch(`${API_BASE_URL}/player/${PlayerId}`, {
+  await fetch(`${API_BASE_URL}/player/${playerId}`, {
     method: "DELETE",
   });
 

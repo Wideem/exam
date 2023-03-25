@@ -39,26 +39,16 @@ const renderPlayerTableRows = async (players) => {
     editButton.className = "btn btn-warning";
     editButton.style = "margin-right: 10px";
     editButton.addEventListener("click", async () => {
-      window.location.replace(`../edit-player/edit-player.html?id=${s.id}`);
+      window.location.replace(`../edit-player/edit-player.html?id=${p.id}`);
     });
     actionCell.appendChild(editButton);
 
-    const replaceButton = document.createElement("button");
-    replaceButton.innerText = "REPLACE";
-    replaceButton.className = "btn btn-warning";
-    replaceButton.style = "margin-right: 10px";
-    replaceButton.addEventListener("click", async () => {
-      window.location.replace(
-        `../replace-player/replace-player.html?id=${s.id}`
-      );
-    });
-    actionCell.appendChild(replaceButton);
 
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "DELETE";
     deleteButton.className = "btn btn-danger";
     deleteButton.addEventListener("click", async () => {
-      await deleteplayerById(s.id);
+      await deletePlayerById(p.id);
       window.location.reload();
     });
     actionCell.appendChild(deleteButton);
