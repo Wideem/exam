@@ -66,7 +66,7 @@ public class PlayerService {
 
 
     private void addTestPlayers() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i < 10; i++) {
             Player player = new Player();
             player.setAge(10 * i + 1);
             player.setName("Vardas-" + i);
