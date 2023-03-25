@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "e94b3364-28fb-443f-b237-fc5bd982ec06",
+		"name": "player",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/player",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"player"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all players",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 20:33:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Vardas-1\",\n        \"lastname\": \"Pavarde-1\",\n        \"email\": \"vardas.pavarde1@gmail.com\",\n        \"gender\": \"male\",\n        \"age\": 94,\n        \"experience\": \"12 years\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Vardas-2\",\n        \"lastname\": \"Pavarde-2\",\n        \"email\": \"vardas.pavarde2@gmail.com\",\n        \"gender\": \"female\",\n        \"age\": 117,\n        \"experience\": \"11 years\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Vardas-3\",\n        \"lastname\": \"Pavarde-3\",\n        \"email\": \"vardas.pavarde3@gmail.com\",\n        \"gender\": \"male\",\n        \"age\": 31,\n        \"experience\": \"10 years\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Vardas-4\",\n        \"lastname\": \"Pavarde-4\",\n        \"email\": \"vardas.pavarde4@gmail.com\",\n        \"gender\": \"female\",\n        \"age\": 68,\n        \"experience\": \"8 years\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Vardas-5\",\n        \"lastname\": \"Pavarde-5\",\n        \"email\": \"vardas.pavarde5@gmail.com\",\n        \"gender\": \"male\",\n        \"age\": 62,\n        \"experience\": \"7 years\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Vardas-6\",\n        \"lastname\": \"Pavarde-6\",\n        \"email\": \"vardas.pavarde6@gmail.com\",\n        \"gender\": \"male\",\n        \"age\": 53,\n        \"experience\": \"6 years\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Vardas-7\",\n        \"lastname\": \"Pavarde-7\",\n        \"email\": \"vardas.pavarde7@gmail.com\",\n        \"gender\": \"female\",\n        \"age\": 98,\n        \"experience\": \"5 years\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Vardas-8\",\n        \"lastname\": \"Pavarde-8\",\n        \"email\": \"vardas.pavarde8@gmail.com\",\n        \"gender\": \"male\",\n        \"age\": 71,\n        \"experience\": \"4 years\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Vardas-9\",\n        \"lastname\": \"Pavarde-9\",\n        \"email\": \"vardas.pavarde9@gmail.com\",\n        \"gender\": \"male\",\n        \"age\": 119,\n        \"experience\": \"3 years\"\n    },\n    {\n        \"id\": 10,\n        \"name\": null,\n        \"lastname\": null,\n        \"email\": \"player11231@gmail.com\",\n        \"gender\": \"female\",\n        \"age\": 89,\n        \"experience\": \"1 years\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add new player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"player11231@gmail.com\",\n    \"name\": \"Laurynas\",\n    \"lastname\": \"Ynas\",\n    \"personCode\": 33309240061,\n    \"startDate\": \"2022-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/player",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"player"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add new player",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"player11231@gmail.com\",\n    \"name\": \"Laurynas\",\n    \"lastname\": \"Ynas\",\n    \"personCode\": 33309240061,\n    \"startDate\": \"2022-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/player",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 20:45:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "get player by id name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/player/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"player",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get player by id name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/player/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 20:37:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Vardas-2\",\n    \"lastname\": \"Pavarde-2\",\n    \"email\": \"vardas.pavarde2@gmail.com\",\n    \"personCode\": 4050701192,\n    \"startDate\": \"2012-02-02\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/student/:studentId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"student",
+						":studentId"
+					],
+					"variable": [
+						{
+							"key": "studentId",
+							"value": "9",
+							"description": "ID of student"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete by id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/player/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 20:44:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "put player by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"Marius@gmail.com\",\n    \"name\": \"Marius\",\n    \"lastname\": \"Ynas\",\n    \"personCode\": 33309240061,\n    \"startDate\": \"2012-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/player/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"player",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "put player by id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"Marius@gmail.com\",\n    \"name\": \"Marius\",\n    \"lastname\": \"Ynas\",\n    \"personCode\": 33309240061,\n    \"startDate\": \"2012-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/player/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 20:46:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "patch player by ID",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"player11231@gmail.com\",\n    \"name\": \"Laurynas\",\n    \"lastname\": \"Labas\",\n    \"personCode\": 33309240061,\n    \"startDate\": \"2020-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/player/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"player",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "patch player by ID",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"player11231@gmail.com\",\n    \"name\": \"Laurynas\",\n    \"lastname\": \"Labas\",\n    \"personCode\": 33309240061,\n    \"startDate\": \"2020-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/player/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"player",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 20:48:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
