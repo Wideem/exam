@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 public class PlayerService {
@@ -72,12 +73,33 @@ public class PlayerService {
             player.setName("Vardas-" + i);
             player.setLastName("Pavarde-" + i);
             player.setEmail("vardas.pavarde" + i + "@gmail.com");
-            player.setPersonCode(Long.valueOf("3234567890" + i));
+            player.setPersonCode(Long.valueOf(generateRandomPersonalCode()));
             player.setStartDate(LocalDate.parse("201"+ i + "-0" + i + "-0" + i));
             this.playerRepository.saveAndFlush(player);
         }
     }
 
+    private static String generateRandomPersonalCode() {
+        
+        Random rand = new Random();
+        int gender = rand.nextInt(2) + 3;
+
+        int birthYear = rand.nextInt(100); 
+        int birthMonth = rand.nextInt(12) + 1; 
+        int maxDays = LocalDate.of(1900 + birthYear, birthMonth, 1).lengthOfMonth(); 
+        int birthDay = rand.nextInt(maxDays) + 1; 
+
+        int randomNum = rand.nextInt(899) + 100; 
+
+        String genderStr = String.valueOf(gender); 
+        String yearStr = String.format("%02d", birthYear); 
+        String monthStr = String.format("%02d", birthMonth); 
+        String dayStr = String.format("%02d", birthDay); 
+        String randomStr = String.valueOf(randomNum); 
+        String personalCode = genderStr + yearStr + monthStr + dayStr + randomStr;
+
+        return personalCode;
+    }
     public void loadTestData() {
         addTestPlayers();
     }
